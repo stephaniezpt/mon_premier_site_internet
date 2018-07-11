@@ -1,0 +1,63 @@
+
+/************************************/
+/***** Eléments de base du site *****/
+/************************************/
+
+* {
+  margin: 10px;
+  padding: 0px;
+}
+
+body {
+  font-family: Andale Mono, serif;
+  background-image: url("sky_ciel.jpg");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/************************************/
+/***** Eléments en haut du site *****/
+/************************************/
+
+header {
+  background-color: rgba(46, 174, 229, 0.67);
+  height: 100px;
+}
+
+h1 {
+  color: white;
+  padding: 30px 50px;
+  text-align: center;
+  text-decoration: none;
+}
+/**************************************/
+/***** Eléments du menu déroulant *****/
+/**************************************/
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+li{
+  margin-left:2px solid white;
+  float:left;
+}
+
+ul li a {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 25px;
+  background-color: rgba(46, 174, 229, 0.67);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid white;
+}
+
+ul li a:hover {
+  background-color: #7196a3;
+}
