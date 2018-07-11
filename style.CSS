@@ -160,16 +160,19 @@ nav > ul > li:hover a {
 /********** Réseaux sociaux *********/
 /************************************/
 
-.social {
+.social{
   background-color: rgba (0,0,0,0,2);
   width: 40px;
   height: 40px;
   display: block;
+  border-radius: 50%;
 }
 
-
-
-
+.social img{
+  margin-top: 100px;
+  width: 40px;
+  height: 40px;
+}
 
 /************************************/
 /************* Diaporama ************/
@@ -178,7 +181,7 @@ nav > ul > li:hover a {
 .diaporama1{
   margin: 50px;
   margin-left:225px;
-  margin-top: 130px;
+  margin-top: 1px;
   width: 960px;
   height: 500px;
   border:3px solid #386182;
@@ -197,3 +200,55 @@ nav > ul > li:hover a {
     33%{background-image:url("imgs/image5.jpg");}
     66%{background-image:url("imgs/image6.jpg");}
     }
+
+
+.container{
+  width: 1280px;
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #ff0;
+  margin: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.container .box .imgBox{
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box .imgBox img{
+  max-width: 100%;
+  transition: transform 2s;
+}
+
+.container .box:hover .imgBox img{
+  transform: scale(1.2);
+}
+
+.container .box .details{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgpa (0,0,0,.8);
+}
+
+.container .box .details .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+
+}
