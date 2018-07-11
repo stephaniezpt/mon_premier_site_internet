@@ -75,7 +75,7 @@ nav a{
 }
 
 nav > ul > li > a {
-  padding: 1px 50px;
+  padding: 1px 30px;
   color: #FFF;
 }
 
@@ -88,19 +88,20 @@ nav li:hover .submenu {
   position: absolute;
   top: 100%;
   left: 0px;
-  padding: 0px;
+  padding: 1px;
   z-index: 100000;
 }
 
 .submenu li {
-  border-bottom: 1px solid #CCC;
+  border: 1px solid #CCC;
 }
 
 .submenu li a {
   padding: 15px 30px;
   font-size: 13px;
-  color: rgba(46, 174, 229, 0.67)
-  width: 270px;
+  color: white;
+  width: 100px;
+  height: 3px;
 }
 
 .menu-quisommesnous:hover{
@@ -126,6 +127,34 @@ nav > ul > li:hover a {
   padding: 15px 30px 20px 30px;
 }
 
+.menu-amerique .submenu{
+  background-color: #153f69;
+}
+
+.menu-afrique .submenu {
+  background-color: #153f69;
+}
+
+.menu-europe .submenu {
+  background-color: #153f69;
+}
+
+.submenu li:hover a{
+  color: #EEE;
+  font-weight: bold;
+}
+
+.menu-amerique .submenu li:hover{
+  background color: #153f69;
+}
+
+.menu-afrique .submenu li:hover{
+  background-color: #153f69;
+}
+
+.menu-europe .submenu li:hover{
+  background-color: #153f69;
+}
 /************************************/
 /************* Diaporama ************/
 /************************************/
