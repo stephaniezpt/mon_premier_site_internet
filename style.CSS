@@ -181,7 +181,7 @@ nav > ul > li:hover a {
 .diaporama1{
   margin: 50px;
   margin-left:225px;
-  margin-top: 1px;
+  margin-top: -100px;
   width: 960px;
   height: 500px;
   border:3px solid #386182;
@@ -201,10 +201,15 @@ nav > ul > li:hover a {
     66%{background-image:url("imgs/image6.jpg");}
     }
 
+/************************************/
+/******** Boxs en bas du site *******/
+/************************************/
 
 .container{
   width: 1280px;
   margin: 70px auto 0;
+  margin-top: 150px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -214,7 +219,7 @@ nav > ul > li:hover a {
   position: relative;
   width: 300px;
   height: 300px;
-  background: #ff0;
+  background: rgba(46, 174, 229, 0.67);
   margin: 10px;
   box-sizing: border-box;
   display: inline-block;
@@ -241,6 +246,12 @@ nav > ul > li:hover a {
   bottom: 10px;
   right: 10px;
   background: rgpa (0,0,0,.8);
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+
+.container .box:hover .details  {
+  transform: scaleY(1);
 }
 
 .container .box .details .content {
@@ -250,5 +261,9 @@ nav > ul > li:hover a {
   text-align: center;
   padding: 15px;
   color: #fff;
+}
 
+.container .box .details .content p{
+  margin: 10px 0 0;
+  padding: 0;
 }
