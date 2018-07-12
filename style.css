@@ -293,3 +293,19 @@ nav > ul > li:hover a {
   margin: 10px 0 0;
   padding: 0;
 }
+
+
+@media {
+  header {
+    width: 132%;
+  }
+  h1{
+    text-align: left;
+    margin-left:
+  }
+  .conteneur{
+    display: flex;
+    margin-top: 1000px;
+    margin-left: 800px;
+  }
+}
