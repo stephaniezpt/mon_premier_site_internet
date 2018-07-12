@@ -83,6 +83,10 @@ nav > ul > li > a {
   display: none;
 }
 
+.menu-quisommesnous{
+  margin-right: 50px;
+}
+
 .menu-amerique{
   margin-right: 100px;
 }
