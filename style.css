@@ -83,6 +83,14 @@ nav > ul > li > a {
   display: none;
 }
 
+.menu-amerique{
+  margin-right: 100px;
+}
+
+.menu-afrique{
+  margin-right: 100px;
+}
+
 nav li:hover .submenu {
   display: block;
   position: absolute;
