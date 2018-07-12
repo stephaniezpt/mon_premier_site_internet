@@ -159,17 +159,17 @@ nav > ul > li:hover a {
 /************************************/
 /********** Réseaux sociaux *********/
 /************************************/
+.conteneur {
+  display: inline-block;
+  margin-top: 200px;
+  position: absolute;
+}
 
 .social{
-  background-color: rgba (0,0,0,0,2);
-  width: 40px;
-  height: 40px;
-  display: block;
-  border-radius: 50%;
+  display: flex;
 }
 
 .social img{
-  margin-top: 100px;
   width: 40px;
   height: 40px;
 }
@@ -179,9 +179,6 @@ nav > ul > li:hover a {
 /************************************/
 
 .diaporama1{
-  margin: 50px;
-  margin-left:225px;
-  margin-top: -100px;
   width: 960px;
   height: 500px;
   border:3px solid #386182;
@@ -193,6 +190,8 @@ nav > ul > li:hover a {
   animation-iteration-count: infinite;
   animation-direction: normal;
   box-shadow: 5px 4px 24px -3px rgba(0,0,0,0.75);
+  display: inline-block;
+  margin-left: 14%;
 }
 
 @keyframes diapo1{
@@ -208,7 +207,7 @@ nav > ul > li:hover a {
 .container{
   width: 1280px;
   margin: 70px auto 0;
-  margin-top: 150px;
+  margin-top: 83px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: row;
