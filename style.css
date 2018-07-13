@@ -267,6 +267,9 @@ nav > ul > li > a {
   text-align: center;
   padding: 15px;
   color: #fff;
+  font-family: "imene";
+  src:url("font/PoiretOne-Regular.ttf");
+  font-size: 20px;
 }
 
 .container .box .details .content p{
@@ -275,7 +278,6 @@ nav > ul > li > a {
 }
 
 /* @media (max-width: 640px){
-
   header {
     width: 100%;
   }
@@ -289,5 +291,4 @@ nav > ul > li > a {
     margin-top: 1000px;
     margin-left: 800px;
   }
-
 } */
