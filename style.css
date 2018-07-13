@@ -3,9 +3,15 @@
 /***** Eléments de base du site *****/
 /************************************/
 
-* {
-  margin: 10px;
-  padding: 0px;
+
+@font-face{
+  font-family: "stylo";
+  src:url("font/Satisfy-Regular.ttf");
+}
+
+@font-face{
+  font-family: "imene";
+  src:url("font/PoiretOne-Regular.ttf");
 }
 
 body {
@@ -23,6 +29,7 @@ body {
 header {
   background-color: rgba(46, 174, 229, 0.67);
   height: 100px;
+  width: 100%;
 }
 
 h1 {
@@ -30,37 +37,60 @@ h1 {
   padding: 30px 50px;
   text-align: center;
   text-decoration: none;
+  font-family: "stylo";
+  font-size: 60px;
 }
 
 /**************************************/
 /***** Eléments du menu déroulant *****/
 /**************************************/
 
-nav > ul {
-  margin: 0px;
-  padding: 0px;
-}
-
-nav > ul > li {
-  float: left;
-}
 
 nav li {
   list-style-type: none;
+}
+nav ul{
+  list-style-type: none;
+}
+
+nav > ul{
+  display: flex;
 }
 
 .submenu{
   display: none;
 }
 
+nav li:hover .submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 100000;
+}
+
 nav{
+  margin: 10px;
   width: 100%;
   background-color: rgba(46, 174, 229, 0.67)
 }
 
-nav > ul > li {
-  float: left;
+ul, li {
+margin: 0;
+padding: 0;
+}
+
+
+nav > ul > li > ul > li{
+  border: 1px solid white;
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-continent{
   position: relative;
+  padding: 16px;
+
 }
 
 nav > ul::after {
@@ -70,12 +100,13 @@ nav > ul::after {
 }
 
 nav a{
-  display: inline-block;
-  text-decoration: none;
+text-decoration: none;
+color: white;
+font-size: 21px;
+font-family: "imene";
 }
 
 nav > ul > li > a {
-  padding: 1px 30px;
   color: #FFF;
 }
 
@@ -83,103 +114,19 @@ nav > ul > li > a {
   display: none;
 }
 
-.menu-quisommesnous{
-  margin-right: 50px;
-}
-
-.menu-amerique{
-  margin-right: 100px;
-}
-
-.menu-afrique{
-  margin-right: 100px;
-}
-
-nav li:hover .submenu {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  padding: 1px;
-  z-index: 100000;
-}
-
-.menu-amerique .submenu{
+.menu-continent .submenu{
   margin: 0px;
   border: 1px solid white;
-}
-
-.menu-afrique .submenu {
-  margin: 0px;
-  border: 1px solid white;
-}
-
-.menu-europe .submenu {
-  margin: 0px;
-  border: 1px solid white;
-}
-
-.submenu li {
-  border: 1px solid #CCC;
-}
-
-.submenu li a {
-  padding: 15px 30px;
-  font-size: 13px;
-  color: white;
-  width: 100px;
-  height: 3px;
-}
-
-.menu-quisommesnous:hover{
-  border: 1px solid white;
-  background-color: #153f69;
-}
-.menu-amerique:hover{
-  border: 1px solid white;
   background-color: #153f69;
 }
 
-.menu-afrique:hover{
-  border: 1px solid white;
-  background-color: #153f69;
-}
 
-.menu-europe:hover{
-  border: 1px solid white;
-  background-color: #153f69;
-}
-
-nav > ul > li:hover a {
-  padding: 15px 20px 15px 20px;
-}
-
-.menu-amerique .submenu{
-  background-color: #153f69;
-}
-
-.menu-afrique .submenu {
-  background-color: #153f69;
-}
-
-.menu-europe .submenu {
-  background-color: #153f69;
-}
-
-.submenu li:hover a{
-  color: #EEE;
-  font-weight: bold;
-}
-
-.menu-amerique .submenu li:hover{
+.menu-continent .submenu:hover {
   background color: #153f69;
 }
 
-.menu-afrique .submenu li:hover{
-  background-color: #153f69;
-}
-
-.menu-europe .submenu li:hover{
+.menu-continent:hover{
+  border: 1px solid white;
   background-color: #153f69;
 }
 
@@ -194,6 +141,7 @@ nav > ul > li:hover a {
 
 .social{
   display: flex;
+  margin: 10px;
 }
 
 .social img{
@@ -206,7 +154,7 @@ nav > ul > li:hover a {
 /************************************/
 
 .diaporama1{
-  width: 960px;
+  width: 78vw;
   height: 500px;
   border:3px solid #386182;
   background-image: url("imgs/image4.jpg");
@@ -232,13 +180,12 @@ nav > ul > li:hover a {
 /************************************/
 
 .container{
-  width: 1280px;
   margin: 70px auto 0;
   margin-top: 83px;
   margin-bottom: 100px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .container .box{
@@ -294,18 +241,20 @@ nav > ul > li:hover a {
   padding: 0;
 }
 
+/* @media (max-width: 640px){
 
-@media {
   header {
-    width: 132%;
+    width: 100%;
   }
   h1{
     text-align: left;
     margin-left:
+    color: red;
   }
   .conteneur{
     display: flex;
     margin-top: 1000px;
     margin-left: 800px;
   }
-}
+
+} */
