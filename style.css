@@ -1,11 +1,16 @@
-
 /************************************/
 /***** Eléments de base du site *****/
 /************************************/
 
-* {
-  margin: 10px;
-  padding: 0px;
+
+@font-face{
+  font-family: "stylo";
+  src:url("font/Satisfy-Regular.ttf");
+}
+
+@font-face{
+  font-family: "imene";
+  src:url("font/PoiretOne-Regular.ttf");
 }
 
 body {
@@ -14,6 +19,19 @@ body {
   background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
+}
+
+.haut{
+display: inline-block;
+width: 100%;
+}
+
+.bas{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /************************************/
@@ -21,46 +39,73 @@ body {
 /************************************/
 
 header {
-  background-color: rgba(46, 174, 229, 0.67);
-  height: 100px;
+  width: 100%;
 }
 
 h1 {
   color: white;
-  padding: 30px 50px;
   text-align: center;
   text-decoration: none;
+  font-family: "stylo";
+  font-size: 60px;
+  padding-top: 20px;
+  margin: 0;
+  border-radius: 2%;
+  background-color: rgba(46, 174, 229, 0.67);
+  box-shadow: 17px 19px 44px -15px rgba(0,0,0,0.75);
 }
 
 /**************************************/
 /***** Eléments du menu déroulant *****/
 /**************************************/
 
-nav > ul {
-  margin: 0px;
-  padding: 0px;
-}
-
-nav > ul > li {
-  float: left;
-}
 
 nav li {
   list-style-type: none;
+}
+nav ul{
+  list-style-type: none;
+}
+
+nav > ul{
+  display: flex;
+  justify-content: center;
 }
 
 .submenu{
   display: none;
 }
 
+nav li:hover .submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 100000;
+}
+
 nav{
+  margin-top: 15px;
   width: 100%;
   background-color: rgba(46, 174, 229, 0.67)
 }
 
-nav > ul > li {
-  float: left;
+ul, li {
+margin: 0;
+padding: 0;
+}
+
+
+nav > ul > li > ul > li{
+  border: 1px solid white;
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-continent{
   position: relative;
+  padding: 16px;
+
 }
 
 nav > ul::after {
@@ -70,12 +115,13 @@ nav > ul::after {
 }
 
 nav a{
-  display: inline-block;
-  text-decoration: none;
+text-decoration: none;
+color: white;
+font-size: 21px;
+font-family: "imene";
 }
 
 nav > ul > li > a {
-  padding: 1px 30px;
   color: #FFF;
 }
 
@@ -83,90 +129,51 @@ nav > ul > li > a {
   display: none;
 }
 
-nav li:hover .submenu {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  padding: 1px;
-  z-index: 100000;
-}
-
-.submenu li {
-  border: 1px solid #CCC;
-}
-
-.submenu li a {
-  padding: 15px 30px;
-  font-size: 13px;
-  color: white;
-  width: 100px;
-  height: 3px;
-}
-
-.menu-quisommesnous:hover{
-  border: 1px solid white;
-  background-color: #153f69;
-}
-.menu-amerique:hover{
+.menu-continent .submenu{
+  margin: 0px;
   border: 1px solid white;
   background-color: #153f69;
 }
 
-.menu-afrique:hover{
-  border: 1px solid white;
-  background-color: #153f69;
-}
 
-.menu-europe:hover{
-  border: 1px solid white;
-  background-color: #153f69;
-}
-
-nav > ul > li:hover a {
-  padding: 15px 20px 15px 20px;
-}
-
-.menu-amerique .submenu{
-  background-color: #153f69;
-}
-
-.menu-afrique .submenu {
-  background-color: #153f69;
-}
-
-.menu-europe .submenu {
-  background-color: #153f69;
-}
-
-.submenu li:hover a{
-  color: #EEE;
-  font-weight: bold;
-}
-
-.menu-amerique .submenu li:hover{
+.menu-continent .submenu:hover {
   background color: #153f69;
 }
 
-.menu-afrique .submenu li:hover{
-  background-color: #153f69;
-}
-
-.menu-europe .submenu li:hover{
+.menu-continent:hover{
+  border: 1px solid white;
   background-color: #153f69;
 }
 
 /************************************/
 /********** Réseaux sociaux *********/
 /************************************/
+
 .conteneur {
   display: inline-block;
-  margin-top: 200px;
+  margin-top: 70px;
   position: absolute;
+  position: fixed;
+  z-index: 10;
+}
+
+.conteneur:hover {
 }
 
 .social{
   display: flex;
+  margin: 10px;
+  background: linear-gradient(#da8484, #e09c9c);
+  border-radius: 50%;
+  padding: 10px;
+  opacity: 0.70;
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+}
+
+.social:hover{
+  transform: rotate(20deg);
+  opacity: 1;
 }
 
 .social img{
@@ -179,7 +186,7 @@ nav > ul > li:hover a {
 /************************************/
 
 .diaporama1{
-  width: 960px;
+  width: 78vw;
   height: 500px;
   border:3px solid #386182;
   background-image: url("imgs/image4.jpg");
@@ -191,7 +198,8 @@ nav > ul > li:hover a {
   animation-direction: normal;
   box-shadow: 5px 4px 24px -3px rgba(0,0,0,0.75);
   display: inline-block;
-  margin-left: 14%;
+
+  margin-top: 20px;
 }
 
 @keyframes diapo1{
@@ -205,13 +213,12 @@ nav > ul > li:hover a {
 /************************************/
 
 .container{
-  width: 1280px;
   margin: 70px auto 0;
   margin-top: 83px;
   margin-bottom: 100px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .container .box{
@@ -266,3 +273,19 @@ nav > ul > li:hover a {
   margin: 10px 0 0;
   padding: 0;
 }
+
+/* @media (max-width: 640px){
+  header {
+    width: 100%;
+  }
+  h1{
+    text-align: left;
+    margin-left:
+    color: red;
+  }
+  .conteneur{
+    display: flex;
+    margin-top: 1000px;
+    margin-left: 800px;
+  }
+} */
