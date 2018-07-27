@@ -1,0 +1,62 @@
+
+
+@font-face{
+  font-family: "stylo";
+  src:url("font/Satisfy-Regular.ttf");
+}
+
+@font-face{
+  font-family: "imene";
+  src:url("font/PoiretOne-Regular.ttf");
+}
+
+body {
+  font-family: Andale Mono, serif;
+  background-image: url("sky_ciel.jpg");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.haut{
+display: inline-block;
+width: 100%;
+
+}
+
+header {
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "stylo";
+  font-size: 60px;
+  padding-top: 20px;
+  margin: 0;
+  border-radius: 2%;
+  background-color: rgba(46, 174, 229, 0.67);
+  box-shadow: 17px 19px 44px -15px rgba(0,0,0,0.75);
+}
+
+h2 {
+  color: rgba(46, 174, 229, 0.67);
+  font-family: "imene";
+  font-size: 35px;
+  text-indent: 10%;
+}
+
+.site {
+  background-color: white;
+  box-shadow: 17px 19px 44px -15px rgba(0,0,0,0.75);
+  width: 50%;
+  margin: auto;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
